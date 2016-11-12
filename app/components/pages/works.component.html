@@ -1,0 +1,22 @@
+<div *ngIf="workGroups">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Услуги</h3>
+        </div>
+    </div>
+    <div class="panel-body">
+        <div *ngFor="let group of workGroups">
+            <div class="col-md-9">
+                <div class="row">
+                    <h4>{{group.title}}</h4>
+                    <div *ngFor="let work of group.works">
+                        <div class="row">
+                            <p>{{work.title}}</p>
+                            <p>{{work.value}}</p>
+                        </div>
+                    </div>
+                </div>
+            <hr>
+        </div>
+    </div>
+</div>
