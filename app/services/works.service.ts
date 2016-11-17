@@ -14,7 +14,7 @@ export class WorksService {
     }
 
     getWorkGroups() {
-        return this._http.get( this.serviceUrl + '/prices')
+        return this._http.get( this.serviceUrl + '/works')
             .map(res => res.json());
     }
 }

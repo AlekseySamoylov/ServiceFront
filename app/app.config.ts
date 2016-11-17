@@ -7,5 +7,5 @@ export interface IAppConfig {
 }
 
 export const AppConfig: IAppConfig = {    
-    apiEndpoint: "http://www.alekseysamoylov.com:8080/serviceiii"    
+    apiEndpoint: "http://www.alekseysamoylov.com:8080/serviceiii/rest"    
 };
