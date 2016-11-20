@@ -1,20 +1,15 @@
 <div *ngIf="workGroups">
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h3 class="panel-title">Услуги</h3>
-        </div>
-    </div>
-    <div class="panel-body">
-        <div *ngFor="let group of workGroups">
-            <div class="col-md-9">
-                <div class="row">
-                    <h4>{{group.title}}</h4>
+    <button (click)="hideShowAll()" class="btn btn-info expand-hide-button">{{collapseInfo}}</button>
+    <div *ngFor="let group of workGroups; let i = index">
+        <div>
+            <div class="work-item">
+                <button class="btn btn-default" attr.data-target="#work-group-{{i}}" data-toggle="collapse">{{group.id}}. {{group.title}}</button>
+                <div attr.id="work-group-{{i}}" attr.class="collapse {{collapse}}" >
                     <div *ngFor="let work of group.works">
-                        <div class="row">
-                            <p>{{work.title}} - {{work.value}}</p>
-                        </div>
+                        <p>{{work.title}} - {{work.price}} руб. ({{work.details}})</p>
                     </div>
                 </div>
+            </div>
             <hr>
         </div>
     </div>

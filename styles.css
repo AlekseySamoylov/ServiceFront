@@ -1,0 +1,15 @@
+div.work-item{
+   padding-top:  5px;  
+   padding-bottom: 5px;
+   padding-left:10px;
+}
+
+div.work-item:hover{
+ background-color: gray;
+ color: white; 
+}
+
+button.expand-hide-button{
+    margin-left: 10px;
+    margin-bottom: 30px;
+}

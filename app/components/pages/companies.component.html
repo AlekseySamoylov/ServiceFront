@@ -1,18 +1,11 @@
 <div *ngIf="companies">
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h3 class="panel-title">Компании</h3>
-        </div>
-    </div>
-    <div class="panel-body">
+    <div >
         <div *ngFor="let comp of companies">
-            <div class="col-md-9">
-                <div class="row">
-                    <h4>{{comp.name}}</h4>
-                    <p>{{comp.details}}</p>
-                </div>
-            <div class="col-md-9">
-            <hr>
+            <div class="work-item">
+                <h4>{{comp.name}}</h4>
+                <p>{{comp.details}}</p>
+            </div>
+            <hr/>
         </div>
     </div>
 </div>
