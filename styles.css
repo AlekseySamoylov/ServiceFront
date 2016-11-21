@@ -13,3 +13,12 @@ button.expand-hide-button{
     margin-left: 10px;
     margin-bottom: 30px;
 }
+
+div.horizontal-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.horizontal-container button{
+    margin-right: 20px;
+}

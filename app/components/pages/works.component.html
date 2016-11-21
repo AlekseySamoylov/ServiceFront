@@ -1,10 +1,14 @@
 <div *ngIf="workGroups">
-    <button (click)="hideShowAll()" class="btn btn-info expand-hide-button">{{collapseInfo}}</button>
+    <div class="container horizontal-container">
+        <button (click)="hideShowAll()" class="btn btn-info">{{collapseInfo}}</button>
+        <button class="btn btn-info">Добавить...</button>
+    </div>
+    <hr/>
     <div *ngFor="let group of workGroups; let i = index">
         <div>
             <div class="work-item">
                 <button class="btn btn-default" attr.data-target="#work-group-{{i}}" data-toggle="collapse">{{group.id}}. {{group.title}}</button>
-                <div attr.id="work-group-{{i}}" attr.class="collapse {{collapse}}" >
+                <div attr.id="work-group-{{i}}" attr.class="collapse {{collapse}}">
                     <div *ngFor="let work of group.works">
                         <p>{{work.title}} - {{work.price}} руб. ({{work.details}})</p>
                     </div>
